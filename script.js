@@ -1,5 +1,17 @@
 function minDate(dates) {
   //write you code here
+	dates.sort((a,b)=>{
+let str1=a.slice(0,4);
+let str2=b.slice(0,4); 
+if(str1!=str2) return str1>str2;
+let str3=a.slice(5,7);
+let str4=b.slice(5,7); 
+if(str3!=str4) return str3>str4; 
+let str5=a.slice(8,10);
+let str6=b.slice(8,10); 
+if(str5!=str6) return str5-str6;
+});
+	return dates[0];
 }
 
 // Do not change the code
